@@ -93,7 +93,7 @@ void MainWindow::on_exitButton_clicked()
    QApplication::quit();
 }
 
-void MainWindow::on_EnterButton_clicked()
+void MainWindow::on_enterButton_clicked()
 {
     if(ui->loginForm->text().isEmpty() || ui->passwordForm->text().isEmpty())
     {
@@ -119,10 +119,7 @@ void MainWindow::on_EnterButton_clicked()
             CurUser->setUName(SQLvar->query_to_db->value(1).toString());
             CurUser->setULogin(SQLvar->query_to_db->value(2).toString());
             CurUser->setUIsAdmin(SQLvar->query_to_db->value(4).toBool());
-            qDebug() << CurUser->getUId();
-            qDebug() << CurUser->getUName();
-            qDebug() << CurUser->getULogin();
-            qDebug() << CurUser->getUIsAdmin();
+            ui->stackedWidget->setCurrentIndex(1);
         }
         delete SQLvar->query_to_db;
     }

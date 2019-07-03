@@ -31,7 +31,7 @@ private slots:
     void on_action_triggered();
     void on_exitButton_clicked();
 
-    void on_EnterButton_clicked();
+    void on_enterButton_clicked();
 
 private:
     Ui::MainWindow *ui;
